@@ -16,13 +16,12 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-24 items-center">
                     {/* Brand Logo */}
-                    <Link to="/" className="flex flex-col">
-                        <span className="text-2xl md:text-3xl font-extrabold tracking-tighter text-[#0F2B46] uppercase leading-none">
-                            HT Duo
-                        </span>
-                        <span className="text-sm font-bold tracking-[0.2em] text-[#C5A059] uppercase leading-none mt-1">
-                            Construction
-                        </span>
+                    <Link to="/" className="flex items-center">
+                        <img
+                            src="/logo.svg"
+                            alt="HT Duo Construction"
+                            className="h-20 w-auto object-contain"
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}

@@ -1,0 +1,19 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Roof and Walls (Shed style) -->
+  <path d="M60 90 L340 70 L340 220 L60 220 Z" stroke="#0F2B46" stroke-width="12" fill="none"/>
+  <path d="M190 90 L190 220" stroke="#0F2B46" stroke-width="8" fill="none"/> <!-- Center divider -->
+  <path d="M280 90 L280 220" stroke="#0F2B46" stroke-width="8" fill="none"/> <!-- Right divider -->
+  
+  <!-- Door -->
+  <rect x="150" y="160" width="60" height="60" stroke="#0F2B46" stroke-width="8" fill="none"/>
+  <circle cx="195" cy="190" r="3" fill="#0F2B46"/> <!-- Door handle -->
+
+  <!-- Letters inside house (Abstract representation) -->
+  <path d="M100 120 C100 120 130 130 130 155 C130 180 100 190 100 190 V120 Z" stroke="#0F2B46" stroke-width="0" fill="#0F2B46" /> <!-- D shape attempt - maybe too complex, plain text better? -->
+  <text x="90" y="180" font-family="Arial, sans-serif" font-weight="bold" font-size="80" fill="#0F2B46">D</text>
+  <circle cx="235" cy="140" r="25" stroke="#0F2B46" stroke-width="8" fill="none" /> <!-- O window -->
+
+  <!-- Text Bottom -->
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="50" fill="#0F2B46" letter-spacing="2">HT Duo</text>
+  <text x="200" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#0F2B46" letter-spacing="4">CONSTRUCTION</text>
+</svg>

@@ -9,12 +9,11 @@ export default function Footer() {
                     {/* Brand Info */}
                     <div>
                         <Link to="/" className="inline-block mb-6">
-                            <span className="block text-2xl font-extrabold tracking-tighter text-white uppercase leading-none">
-                                HT Duo
-                            </span>
-                            <span className="block text-xs font-bold tracking-[0.3em] text-[#C5A059] uppercase leading-none mt-1">
-                                Construction
-                            </span>
+                            <img
+                                src="/logo.svg"
+                                alt="HT Duo Construction"
+                                className="h-24 w-auto object-contain brightness-0 invert"
+                            />
                         </Link>
                         <p className="text-slate-300 leading-relaxed mb-6 font-light">
                             Building Strength. Delivering Quality.
