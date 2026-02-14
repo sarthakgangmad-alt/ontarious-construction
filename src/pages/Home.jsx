@@ -65,20 +65,6 @@ export default function Home() {
         let lastTime = 0;
         let currentFrameIndex = 0; // Index in the REDUCED cache array
 
-        // Set canvas size to match first image (assuming consistant size)
-        // Or fit to container
-        const resizeCanvas = () => {
-            const parent = canvas.parentElement;
-            if (parent) {
-                canvas.width = parent.offsetWidth;
-                canvas.height = parent.offsetHeight;
-                // Draw current frame immediately after resize
-                drawFrame(currentFrameIndex);
-            }
-        };
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
         const drawFrame = (index) => {
             const img = imagesCache.current[index];
             if (!img) return;
@@ -104,6 +90,20 @@ export default function Home() {
 
             ctx.drawImage(img, curX, curY, drawW, drawH);
         };
+
+        // Set canvas size to match first image (assuming consistant size)
+        // Or fit to container
+        const resizeCanvas = () => {
+            const parent = canvas.parentElement;
+            if (parent) {
+                canvas.width = parent.offsetWidth;
+                canvas.height = parent.offsetHeight;
+                // Draw current frame immediately after resize
+                drawFrame(currentFrameIndex);
+            }
+        };
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
 
         const animate = (time) => {
             if (time - lastTime >= frameInterval) {
