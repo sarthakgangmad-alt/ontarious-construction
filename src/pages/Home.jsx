@@ -11,7 +11,7 @@ export default function Home() {
     const [imagesLoaded, setImagesLoaded] = useState(false);
     const totalOriginalFrames = 211;
     const frameStep = 1; // Play every frame for maximum smoothness
-    const frameInterval = 33; // ~30fps for smooth video-like playback
+    const frameInterval = 50; // Slower playback (20fps)
 
     // Store loaded images in a ref to avoid re-renders
     const imagesCache = useRef([]);
