@@ -9,9 +9,9 @@ import HomeContactForm from '../components/HomeContactForm';
 export default function Home() {
     const canvasRef = useRef(null);
     const [imagesLoaded, setImagesLoaded] = useState(false);
-    const totalOriginalFrames = 151;
-    const frameStep = 2; // Skip every other frame to reduce load (75 frames total)
-    const frameInterval = 60; // Slightly slower to compensate for skipped frames (~16fps)
+    const totalOriginalFrames = 211;
+    const frameStep = 1; // Play every frame for maximum smoothness
+    const frameInterval = 33; // ~30fps for smooth video-like playback
 
     // Store loaded images in a ref to avoid re-renders
     const imagesCache = useRef([]);
@@ -25,7 +25,7 @@ export default function Home() {
             for (let i = 1; i <= totalOriginalFrames; i += frameStep) {
                 promises.push(new Promise((resolve, reject) => {
                     const img = new Image();
-                    img.src = `/sequence-2/ezgif-frame-${String(i).padStart(3, '0')}.png`;
+                    img.src = `/hero-sequence/ezgif-frame-${String(i).padStart(3, '0')}.jpg`;
                     img.onload = () => resolve({ index: i, img });
                     img.onerror = () => resolve({ index: i, img: null }); // Don't fail all if one fails
                 }));
@@ -134,7 +134,7 @@ export default function Home() {
                      */}
                     {!imagesLoaded && (
                         <img
-                            src="/sequence-2/ezgif-frame-001.png"
+                            src="/hero-sequence/ezgif-frame-001.jpg"
                             alt="Loading..."
                             className="absolute inset-0 w-full h-full object-cover opacity-50 blur-sm transition-opacity duration-500"
                         />
