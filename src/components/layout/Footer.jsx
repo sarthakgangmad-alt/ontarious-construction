@@ -10,15 +10,15 @@ export default function Footer() {
                     <div>
                         <Link to="/" className="inline-block mb-6">
                             <img
-                                src="/logo.svg"
-                                alt="HT Duo Construction"
-                                className="h-24 w-auto object-contain brightness-0 invert"
+                                src="/logo.png"
+                                alt="Ontarious Construction"
+                                className="h-24 w-auto object-contain rounded"
                             />
                         </Link>
                         <p className="text-slate-300 leading-relaxed mb-6 font-light">
-                            Building Strength. Delivering Quality.
+                            Building Excellence. Delivering Quality.
                             <br />
-                            Premium residential and outdoor construction services in Ontario.
+                            Premium residential and commercial renovation in Toronto & GTA.
                         </p>
                         <div className="text-[#C5A059] text-sm font-semibold tracking-wider uppercase">
                             <p>Licensed & Insured</p>
@@ -31,7 +31,7 @@ export default function Footer() {
                         <ul className="space-y-4 text-slate-300">
                             <li><Link to="/about" className="hover:text-white hover:translate-x-1 transition-all inline-block">About Us</Link></li>
                             <li><Link to="/portfolio" className="hover:text-white hover:translate-x-1 transition-all inline-block">Our Projects</Link></li>
-                            <li><Link to="/contact" className="hover:text-white hover:translate-x-1 transition-all inline-block">Careers</Link></li>
+                            <li><Link to="/services" className="hover:text-white hover:translate-x-1 transition-all inline-block">Services</Link></li>
                             <li><Link to="/contact" className="hover:text-white hover:translate-x-1 transition-all inline-block">Contact</Link></li>
                         </ul>
                     </div>
@@ -40,8 +40,8 @@ export default function Footer() {
                     <div>
                         <h4 className="text-sm font-bold mb-6 uppercase tracking-widest text-[#C5A059]">Services</h4>
                         <ul className="space-y-4 text-slate-300">
-                            <li><Link to="/services" className="hover:text-white hover:translate-x-1 transition-all inline-block">Backyard Upgrades</Link></li>
-                            <li><Link to="/services" className="hover:text-white hover:translate-x-1 transition-all inline-block">Custom Decks</Link></li>
+                            <li><Link to="/services" className="hover:text-white hover:translate-x-1 transition-all inline-block">Residential Renovation</Link></li>
+                            <li><Link to="/services" className="hover:text-white hover:translate-x-1 transition-all inline-block">Commercial Build-outs</Link></li>
                             <li><Link to="/services" className="hover:text-white hover:translate-x-1 transition-all inline-block">Home Additions</Link></li>
                             <li><Link to="/services" className="hover:text-white hover:translate-x-1 transition-all inline-block">Interlocking & Concrete</Link></li>
                         </ul>
@@ -53,15 +53,15 @@ export default function Footer() {
                         <div className="space-y-5 text-slate-300">
                             <div className="flex items-start">
                                 <MapPin size={18} className="text-[#C5A059] mt-1 mr-3 shrink-0" />
-                                <p>84 Tania Crescent,<br />Maple, ON L6A 2M8</p>
+                                <p>Toronto &<br />Greater Toronto Area</p>
                             </div>
                             <div className="flex items-center">
                                 <Phone size={18} className="text-[#C5A059] mr-3 shrink-0" />
-                                <p><a href="tel:+16473035424" className="hover:text-white transition-colors">+1 647-303-5424</a></p>
+                                <p><a href="tel:6476421281" className="hover:text-white transition-colors">(647) 642-1281</a></p>
                             </div>
                             <div className="flex items-center">
                                 <Mail size={18} className="text-[#C5A059] mr-3 shrink-0" />
-                                <p><a href="mailto:info@htduoconstruction.com" className="hover:text-white transition-colors">info@htduoconstruction.com</a></p>
+                                <p><a href="mailto:info@ontariousconstruction.ca" className="hover:text-white transition-colors">info@ontariousconstruction.ca</a></p>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-[#1a3c5e] text-center md:text-left flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
-                    <p>© {new Date().getFullYear()} HT Duo Construction. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Ontarious Construction. All rights reserved.</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <a href="#" className="hover:text-[#C5A059] transition-colors"><Instagram size={20} /></a>
                         <a href="#" className="hover:text-[#C5A059] transition-colors"><Facebook size={20} /></a>

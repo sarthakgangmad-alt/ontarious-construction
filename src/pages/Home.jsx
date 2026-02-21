@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck, Ruler, Clock, Star, Hammer, Layers, Layout, Home as HomeIcon } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Ruler, Clock, Star, Hammer, Layers, Layout, Home as HomeIcon, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { LiquidMetalButton } from '../components/ui/LiquidMetal';
 import TestimonialCarousel from '../components/TestimonialCarousel';
+import HomeContactForm from '../components/HomeContactForm';
 
 export default function Home() {
     const canvasRef = useRef(null);
@@ -156,16 +157,19 @@ export default function Home() {
                     >
                         <div className="flex items-center space-x-3 text-[#C5A059] font-bold uppercase tracking-[0.2em] mb-8 text-sm md:text-base">
                             <span className="w-16 h-0.5 bg-[#C5A059]"></span>
-                            <span>Premium Outdoor Living</span>
+                            <span>Ontarious Construction</span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-8 tracking-tight leading-[1.1]">
-                            Building Excellence. <br />
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight leading-[1.1]">
+                            Premium Builders. <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#E5C079]">
-                                Crafting Luxury.
+                                Limitless Potential.
                             </span>
                         </h1>
+                        <p className="text-2xl md:text-3xl font-bold text-[#C5A059] mb-10 tracking-wide">
+                            Call Now: <a href="tel:647-642-1281" className="hover:text-white transition-colors">(647) 642-1281</a>
+                        </p>
                         <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-2xl leading-relaxed font-light border-l-4 border-[#C5A059] pl-6">
-                            Premium Construction & Backyard Transformations in Ontario. We turn outdoor spaces into luxury retreats.
+                            Professional Residential & Commercial Renovation Services across Toronto & the GTA. Quality that stands the test of time.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6">
                             <Link to="/contact">
@@ -175,18 +179,18 @@ export default function Home() {
                                     metalConfig={{ colorBack: '#C5A059', colorTint: '#E5C079' }}
                                     className="font-bold uppercase tracking-wider"
                                 >
-                                    Get a Free Quote
+                                    Request a Quote
                                 </LiquidMetalButton>
                             </Link>
-                            <Link to="/portfolio" className="inline-flex items-center justify-center px-10 py-5 bg-transparent border-2 border-slate-500 text-white font-bold uppercase tracking-wider hover:bg-white hover:text-[#0F2B46] hover:border-white transition-all rounded-sm">
-                                View Our Work
-                            </Link>
+                            <a href="tel:647-642-1281" className="inline-flex items-center justify-center px-10 py-5 bg-transparent border-2 border-slate-500 text-white font-bold uppercase tracking-wider hover:bg-white hover:text-[#0F2B46] hover:border-white transition-all rounded-sm">
+                                Call (647) 642-1281
+                            </a>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Introduction / About Snippet */}
+            {/* Introduction Snippet */}
             <section className="py-24 bg-white relative z-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -198,13 +202,13 @@ export default function Home() {
                         </div>
                         <div>
                             <p className="text-xl text-slate-600 leading-relaxed mb-6 font-light">
-                                <span className="font-bold text-[#0F2B46]">HT Duo Construction</span> is a premium construction company based in Maple, Ontario, specializing in backyard upgrades, structural builds, and custom outdoor living spaces.
+                                <span className="font-bold text-[#0F2B46]">Ontarious Construction</span> is a premier residential and commercial renovation firm proudly serving Toronto and the Greater Toronto Area.
                             </p>
                             <p className="text-slate-600 leading-relaxed mb-8">
-                                We are committed to craftsmanship, professionalism, and delivering projects that exceed expectations. Our team ensures precision, structural integrity, and modern design excellence in every build.
+                                We are committed to meticulous craftsmanship, professionalism, and delivering projects that consistently exceed expectations. Our licensed team ensures precision, structural integrity, and architectural excellence from foundational work to the final finish.
                             </p>
                             <Link to="/about" className="text-[#0F2B46] font-bold uppercase tracking-widest border-b-2 border-[#C5A059] pb-1 hover:text-[#C5A059] transition-colors">
-                                More About Us
+                                Discover Our Standards
                             </Link>
                         </div>
                     </div>
@@ -212,7 +216,7 @@ export default function Home() {
             </section>
 
             {/* Services Preview Section */}
-            <section className="py-24 bg-slate-50 relative z-20">
+            <section className="py-24 bg-slate-50 relative z-20 border-t border-slate-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16 px-2">
                         <span className="text-[#C5A059] font-bold uppercase tracking-wider text-sm">Our Expertise</span>
@@ -221,12 +225,12 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { title: 'Backyard Transformations', desc: 'Complete outdoor makeovers involving grading, hardscaping, and design.', icon: Layout },
-                            { title: 'Deck & Patio Construction', desc: 'Custom wood and composite decks, stone patios, and entertainment areas.', icon: Layers },
-                            { title: 'Structural Framing', desc: 'Solid framework for additions, gazebos, cabanas, and custom structures.', icon: Ruler },
-                            { title: 'Custom Outdoor Spaces', desc: 'Luxury outdoor kitchens, fire pits, and living rooms.', icon: HomeIcon },
-                            { title: 'Residential Renovations', desc: 'Interior and exterior home improvements executed with precision.', icon: Hammer },
-                            { title: 'Concrete & Interlocking', desc: 'Durable and aesthetic driveways, walkways, and retaining walls.', icon: Layout }
+                            { title: 'Residential Renovations', desc: 'Full-scale interior transformations including kitchens, bathrooms, and basements.', icon: HomeIcon },
+                            { title: 'Commercial Build-Outs', desc: 'Customized commercial renovations tailored for retail, office, and hospitality.', icon: Layout },
+                            { title: 'Home Additions', desc: 'Seamlessly integrated structural expansions that enhance your living space.', icon: Layers },
+                            { title: 'Custom Outdoor Spaces', desc: 'High-end decks, patios, and outdoor living structures.', icon: Hammer },
+                            { title: 'Concrete & Interlocking', desc: 'Durable, architecturally designed driveways, walkways, and retaining walls.', icon: Ruler },
+                            { title: 'General Contracting', desc: 'Comprehensive project management to oversee every phase of construction.', icon: ShieldCheck }
                         ].map((service, i) => (
                             <motion.div
                                 key={service.title}
@@ -234,7 +238,7 @@ export default function Home() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
                                 viewport={{ once: true }}
-                                className="p-10 bg-white shadow-sm hover:shadow-2xl transition-all duration-300 group border-l-4 border-transparent hover:border-[#C5A059]"
+                                className="p-10 bg-white shadow-sm hover:shadow-2xl transition-all duration-300 group border-t-4 border-transparent hover:border-[#C5A059]"
                             >
                                 <div className="w-14 h-14 bg-[#0F2B46]/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#0F2B46] transition-colors">
                                     <service.icon size={28} className="text-[#0F2B46] group-hover:text-[#C5A059]" />
@@ -242,11 +246,22 @@ export default function Home() {
                                 <h3 className="text-2xl font-bold text-[#0F2B46] mb-4">{service.title}</h3>
                                 <p className="text-slate-600 mb-6 leading-relaxed text-sm">{service.desc}</p>
                                 <Link to="/services" className="text-[#C5A059] font-bold text-xs uppercase tracking-wider flex items-center">
-                                    View Service <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    View Details <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </motion.div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* Homepage Contact Form Section */}
+            <section className="py-24 bg-white relative z-20 border-t border-slate-100">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl md:text-5xl font-black text-[#0F2B46] mb-4">Request Your Free Consultation</h2>
+                        <p className="text-xl text-slate-500 font-light">Complete the form below to receive a detailed estimate for your premium construction project.</p>
+                    </div>
+                    <HomeContactForm />
                 </div>
             </section>
 
@@ -272,11 +287,11 @@ export default function Home() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-24 bg-white text-center z-20">
+            <section className="py-24 bg-white text-center z-20 border-t border-slate-100">
                 <div className="max-w-4xl mx-auto px-4">
                     <h2 className="text-4xl md:text-6xl font-black text-[#0F2B46] mb-8">Ready to Build?</h2>
                     <p className="text-xl text-slate-500 mb-12 max-w-2xl mx-auto font-light">
-                        Contact HT Duo Construction today for a consultation on your premium residential or outdoor project.
+                        Contact Ontarious Construction today for a consultation on your premium residential or commercial renovation project.
                     </p>
                     <div className="flex justify-center">
                         <Link to="/contact">
@@ -286,16 +301,14 @@ export default function Home() {
                                 metalConfig={{ colorBack: '#0F2B46', colorTint: '#4682B4' }}
                                 className="font-bold text-lg px-12"
                             >
-                                Get a Quote
+                                Contact Us
                             </LiquidMetalButton>
                         </Link>
                     </div>
                     <div className="mt-8 flex justify-center items-center space-x-2 text-slate-400 text-sm uppercase tracking-widest font-bold">
-                        <span>Maple</span>
+                        <span>Toronto</span>
                         <span className="w-1 h-1 bg-[#C5A059] rounded-full"></span>
-                        <span>Vaughan</span>
-                        <span className="w-1 h-1 bg-[#C5A059] rounded-full"></span>
-                        <span>GTA</span>
+                        <span>Greater Toronto Area</span>
                     </div>
                 </div>
             </section>

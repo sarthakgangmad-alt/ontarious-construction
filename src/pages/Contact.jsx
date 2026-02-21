@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, Clock } from 'lucide-react';
 import { LiquidMetalButton } from '../components/ui/LiquidMetal';
 import { useState } from 'react';
 import { supabase } from '../lib/supabase';
@@ -7,10 +7,13 @@ import { supabase } from '../lib/supabase';
 export default function Contact() {
     const [formState, setFormState] = useState({
         name: '',
-        email: '',
         phone: '',
-        projectType: '',
-        message: ''
+        email: '',
+        serviceType: '',
+        description: '',
+        budget: '',
+        timeline: '',
+        location: ''
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,8 +30,8 @@ export default function Contact() {
                     name: formState.name,
                     email: formState.email,
                     phone: formState.phone,
-                    project_type: formState.projectType,
-                    description: formState.message
+                    project_type: formState.serviceType,
+                    description: `Budget: ${formState.budget} | Timeline: ${formState.timeline} | Location: ${formState.location} | Details: ${formState.description}`
                 }]);
 
             if (error) throw error;
@@ -36,8 +39,6 @@ export default function Contact() {
             setIsSubmitted(true);
         } catch (error) {
             console.error('Error', error);
-            // Even if error, show success for demo/offline logic if wanted, 
-            // but usually we'd show error. For now, we assume success or fallback.
             setIsSubmitting(false);
             setIsSubmitted(true);
         }
@@ -47,10 +48,13 @@ export default function Contact() {
         setIsSubmitted(false);
         setFormState({
             name: '',
-            email: '',
             phone: '',
-            projectType: '',
-            message: ''
+            email: '',
+            serviceType: '',
+            description: '',
+            budget: '',
+            timeline: '',
+            location: ''
         });
     };
 
@@ -75,10 +79,10 @@ export default function Contact() {
                         </div>
 
                         <h3 className="text-2xl font-black text-[#0F2B46] mb-3 leading-tight">
-                            Form Submitted Successfully!
+                            Request Received
                         </h3>
                         <p className="text-slate-500 mb-8 leading-relaxed">
-                            Our team will reach out to you soon.
+                            Thank you for contacting Ontarious Construction. Our team will review your details and respond promptly.
                         </p>
 
                         <LiquidMetalButton
@@ -86,7 +90,7 @@ export default function Contact() {
                             className="w-full font-bold text-lg"
                             metalConfig={{ colorBack: '#0F2B46', colorTint: '#4682B4' }}
                         >
-                            Awesome
+                            Return
                         </LiquidMetalButton>
                     </motion.div>
                 </div>
@@ -97,12 +101,12 @@ export default function Contact() {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-6xl font-bold mb-6"
+                        className="text-4xl md:text-6xl font-black mb-6"
                     >
-                        Contact <span className="text-[#C5A059]">HT Duo</span>
+                        Get In Touch With <span className="text-[#C5A059]">Ontarious Construction</span>
                     </motion.h1>
-                    <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-                        Ready to start your project? Get in touch for a free estimate.
+                    <p className="text-slate-300 text-lg max-w-3xl mx-auto font-light leading-relaxed">
+                        For inquiries, project consultations, or to request a quote, please call us directly at (647) 642-1281 or complete the contact form below. Our team will respond promptly.
                     </p>
                 </div>
             </div>
@@ -112,30 +116,38 @@ export default function Contact() {
                     {/* Contact Info */}
                     <div className="space-y-8">
                         <div>
-                            <h3 className="text-2xl font-bold text-[#0F2B46] mb-6">Get in Touch</h3>
-                            <p className="text-slate-600 mb-8 leading-relaxed">
-                                We are here to answer any questions you may have about your construction needs. Reach out to us via phone, email, or by filling out the form.
+                            <h3 className="text-2xl font-bold text-[#0F2B46] mb-6">Contact Details</h3>
+                            <p className="text-slate-600 mb-8 leading-relaxed border-l-4 border-[#C5A059] pl-4">
+                                Partner with Ontarious Construction for premium residential and commercial renovations across the Greater Toronto Area.
                             </p>
                         </div>
 
                         <div className="space-y-6">
-                            <div className="flex items-start bg-slate-50 p-6 rounded-xl border border-slate-100">
-                                <MapPin className="text-[#C5A059] mt-1 shrink-0" size={24} />
-                                <div className="ml-4">
-                                    <h4 className="font-bold text-[#0F2B46] uppercase text-sm tracking-wider mb-1">Office Location</h4>
-                                    <p className="text-slate-600">84 Tania Crescent<br />Maple, ON L6A 2M8</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start bg-slate-50 p-6 rounded-xl border border-slate-100">
+                            <div className="flex items-start bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm">
                                 <Phone className="text-[#C5A059] mt-1 shrink-0" size={24} />
                                 <div className="ml-4">
                                     <h4 className="font-bold text-[#0F2B46] uppercase text-sm tracking-wider mb-1">Phone</h4>
-                                    <p className="text-slate-600">+1 647-303-5424</p>
+                                    <p className="text-slate-600"><a href="tel:647-642-1281" className="hover:text-[#C5A059] transition-colors">(647) 642-1281</a></p>
                                 </div>
                             </div>
 
-                            <div className="h-64 w-full rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-slate-100 relative">
+                            <div className="flex items-start bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm">
+                                <MapPin className="text-[#C5A059] mt-1 shrink-0" size={24} />
+                                <div className="ml-4">
+                                    <h4 className="font-bold text-[#0F2B46] uppercase text-sm tracking-wider mb-1">Service Area</h4>
+                                    <p className="text-slate-600">Toronto & Greater Toronto Area</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm">
+                                <Clock className="text-[#C5A059] mt-1 shrink-0" size={24} />
+                                <div className="ml-4">
+                                    <h4 className="font-bold text-[#0F2B46] uppercase text-sm tracking-wider mb-1">Office Hours</h4>
+                                    <p className="text-slate-600">Monday – Saturday | 8:00 AM – 6:00 PM</p>
+                                </div>
+                            </div>
+
+                            <div className="h-64 w-full rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-slate-100 relative mt-8">
                                 {/* Google Map Placeholder */}
                                 <iframe
                                     width="100%"
@@ -144,7 +156,7 @@ export default function Contact() {
                                     scrolling="no"
                                     marginHeight="0"
                                     marginWidth="0"
-                                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=84%20Tania%20Crescent%2C%20Maple%2C%20ON+(HT%20Duo%20Construction)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Toronto,%20ON&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                                 ></iframe>
                             </div>
                         </div>
@@ -153,78 +165,144 @@ export default function Contact() {
                     {/* Form */}
                     <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-slate-100 relative z-10">
                         <form onSubmit={handleSubmit} className="space-y-6">
-                            <h3 className="text-xl font-bold text-[#0F2B46] mb-6">Send Us a Message</h3>
-                            <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Name</label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    required
-                                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all"
-                                    value={formState.name}
-                                    onChange={handleChange}
-                                />
+                            <h3 className="text-2xl font-black text-[#0F2B46] mb-6">Request Your Free Consultation</h3>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider">Full Name</label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        required
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all"
+                                        value={formState.name}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        required
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all"
+                                        value={formState.phone}
+                                        onChange={handleChange}
+                                    />
+                                </div>
                             </div>
+
                             <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Email</label>
+                                <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider">Email Address</label>
                                 <input
                                     type="email"
                                     name="email"
                                     required
-                                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all"
+                                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all"
                                     value={formState.email}
                                     onChange={handleChange}
                                 />
                             </div>
-                            <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Phone</label>
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    required
-                                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all"
-                                    value={formState.phone}
-                                    onChange={handleChange}
-                                />
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider">Type of Service</label>
+                                    <select
+                                        name="serviceType"
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all"
+                                        value={formState.serviceType}
+                                        onChange={handleChange}
+                                        required
+                                    >
+                                        <option value="">Select service...</option>
+                                        <option value="Residential Renovation">Residential Renovation</option>
+                                        <option value="Commercial Renovation">Commercial Renovation</option>
+                                        <option value="Home Addition">Home Addition</option>
+                                        <option value="New Build">New Build</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider">Budget Range</label>
+                                    <select
+                                        name="budget"
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all"
+                                        value={formState.budget}
+                                        onChange={handleChange}
+                                        required
+                                    >
+                                        <option value="">Select budget...</option>
+                                        <option value="Under $50k">Under $50k</option>
+                                        <option value="$50k - $100k">$50k - $100k</option>
+                                        <option value="$100k - $250k">$100k - $250k</option>
+                                        <option value="$250k+">$250k+</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Project Type</label>
-                                <select
-                                    name="projectType"
-                                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all"
-                                    value={formState.projectType}
-                                    onChange={handleChange}
-                                >
-                                    <option value="">Select a project type...</option>
-                                    <option value="Backyard Transformation">Backyard Transformation</option>
-                                    <option value="Deck or Patio">Deck or Patio</option>
-                                    <option value="Home Addition">Home Addition</option>
-                                    <option value="Renovation">Renovation</option>
-                                    <option value="Other">Other</option>
-                                </select>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider">Preferred Timeline</label>
+                                    <select
+                                        name="timeline"
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all"
+                                        value={formState.timeline}
+                                        onChange={handleChange}
+                                        required
+                                    >
+                                        <option value="">Select timeline...</option>
+                                        <option value="Immediately">Immediately</option>
+                                        <option value="1-3 Months">1-3 Months</option>
+                                        <option value="3-6 Months">3-6 Months</option>
+                                        <option value="6+ Months">6+ Months</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider">Property Location</label>
+                                    <input
+                                        type="text"
+                                        name="location"
+                                        required
+                                        placeholder="City/Neighborhood"
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all"
+                                        value={formState.location}
+                                        onChange={handleChange}
+                                    />
+                                </div>
                             </div>
+
                             <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Message</label>
+                                <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider">Project Description</label>
                                 <textarea
-                                    name="message"
+                                    name="description"
                                     rows={4}
-                                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all resize-none"
-                                    value={formState.message}
+                                    required
+                                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#C5A059] transition-all resize-none"
+                                    value={formState.description}
                                     onChange={handleChange}
                                 />
                             </div>
+
+                            <p className="text-sm text-center text-slate-500 my-4 font-medium">Call us directly at <a href="tel:647-642-1281" className="text-[#0F2B46] font-bold hover:text-[#C5A059]">(647) 642-1281</a> for immediate assistance.</p>
+
                             <LiquidMetalButton
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full font-bold text-[#0F2B46] tracking-wider"
+                                className="w-full font-bold text-[#0F2B46] tracking-wider py-4"
                                 metalConfig={{ colorBack: '#0F2B46', colorTint: '#4682B4' }}
                             >
-                                {isSubmitting ? 'Sending...' : 'Send Message'}
+                                {isSubmitting ? 'Processing request...' : 'Submit Request'}
                             </LiquidMetalButton>
                         </form>
                     </div>
                 </div>
             </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 text-center">
+                <h3 className="text-3xl font-black text-[#0F2B46] mb-6">Ready to start your renovation?</h3>
+                <p className="text-xl text-slate-600">Call <a href="tel:647-642-1281" className="font-bold text-[#0F2B46] hover:text-[#C5A059] transition-colors">(647) 642-1281</a> today.</p>
+            </div>
+
         </div>
     );
 }

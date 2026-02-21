@@ -18,8 +18,8 @@ export default function Navbar() {
                     {/* Brand Logo */}
                     <Link to="/" className="flex items-center">
                         <img
-                            src="/logo.svg"
-                            alt="HT Duo Construction"
+                            src="/logo.png"
+                            alt="Ontarious Construction"
                             className="h-20 w-auto object-contain"
                         />
                     </Link>

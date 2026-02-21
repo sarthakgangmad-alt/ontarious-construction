@@ -27,7 +27,7 @@ const testimonials = [
     {
         rating: "5.0",
         title: "Professional & Reliable",
-        text: "HT Duo Construction delivered exactly what was promised. The attention to detail and structural integrity is unmatched.",
+        text: "Ontarious Construction delivered exactly what was promised. The attention to detail and structural integrity is unmatched.",
         name: "Michael T.",
         role: "Property Manager"
     }
