@@ -60,11 +60,19 @@ export const LiquidMetalButton = forwardRef(
         },
         ref
     ) => {
-        const sizeStyles = {
+        const sizeStylesWithIcon = {
             sm: "py-2 pl-2 pr-6 gap-3 text-sm",
             md: "py-3 pl-3 pr-8 gap-4 text-base",
             lg: "py-4 pl-4 pr-10 gap-6 text-lg",
         };
+
+        const sizeStylesNoIcon = {
+            sm: "py-2 px-6 justify-center text-sm",
+            md: "py-3 px-8 justify-center text-base",
+            lg: "py-4 px-10 justify-center text-lg",
+        };
+
+        const activeSizeStyles = icon ? sizeStylesWithIcon[size] : sizeStylesNoIcon[size];
 
         const iconSizes = {
             sm: "w-8 h-8",
@@ -104,7 +112,7 @@ export const LiquidMetalButton = forwardRef(
                             "bg-[#0F2B46] text-white",
                             "transition-colors duration-200",
                             "group-hover:bg-[#153452]",
-                            sizeStyles[size]
+                            activeSizeStyles
                         )}
                     >
                         {icon && (
