@@ -225,12 +225,12 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { title: 'Residential Renovations', desc: 'Full-scale interior transformations including kitchens, bathrooms, and basements.', icon: HomeIcon },
-                            { title: 'Commercial Build-Outs', desc: 'Customized commercial renovations tailored for retail, office, and hospitality.', icon: Layout },
-                            { title: 'Home Additions', desc: 'Seamlessly integrated structural expansions that enhance your living space.', icon: Layers },
-                            { title: 'Custom Outdoor Spaces', desc: 'High-end decks, patios, and outdoor living structures.', icon: Hammer },
-                            { title: 'Concrete & Interlocking', desc: 'Durable, architecturally designed driveways, walkways, and retaining walls.', icon: Ruler },
-                            { title: 'General Contracting', desc: 'Comprehensive project management to oversee every phase of construction.', icon: ShieldCheck }
+                            { title: 'Residential Renovations', desc: 'Full-scale interior transformations including kitchens, bathrooms, and basements.', image: '/services/res_renovation_1771742585128.png' },
+                            { title: 'Commercial Build-Outs', desc: 'Customized commercial renovations tailored for retail, office, and hospitality.', image: '/services/com_buildout_1771742607982.png' },
+                            { title: 'Home Additions', desc: 'Seamlessly integrated structural expansions that enhance your living space.', image: '/services/home_addition_1771742626405.png' },
+                            { title: 'Custom Outdoor Spaces', desc: 'High-end decks, patios, and outdoor living structures.', image: '/services/outdoor_space_1771742647048.png' },
+                            { title: 'Concrete & Interlocking', desc: 'Durable, architecturally designed driveways, walkways, and retaining walls.', image: '/services/concrete_interloc_1771742667218.png' },
+                            { title: 'General Contracting', desc: 'Comprehensive project management to oversee every phase of construction.', image: '/services/gen_contracting_1771742685294.png' }
                         ].map((service, i) => (
                             <motion.div
                                 key={service.title}
@@ -238,16 +238,19 @@ export default function Home() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
                                 viewport={{ once: true }}
-                                className="p-10 bg-white shadow-sm hover:shadow-2xl transition-all duration-300 group border-t-4 border-transparent hover:border-[#C5A059]"
+                                className="bg-white shadow-sm hover:shadow-2xl transition-all duration-300 group rounded-xl overflow-hidden border border-slate-100 flex flex-col h-full"
                             >
-                                <div className="w-14 h-14 bg-[#0F2B46]/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#0F2B46] transition-colors">
-                                    <service.icon size={28} className="text-[#0F2B46] group-hover:text-[#C5A059]" />
+                                <div className="h-48 relative overflow-hidden">
+                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    <div className="absolute inset-0 bg-[#0F2B46]/20 group-hover:bg-transparent transition-colors duration-300"></div>
                                 </div>
-                                <h3 className="text-2xl font-bold text-[#0F2B46] mb-4">{service.title}</h3>
-                                <p className="text-slate-600 mb-6 leading-relaxed text-sm">{service.desc}</p>
-                                <Link to="/services" className="text-[#C5A059] font-bold text-xs uppercase tracking-wider flex items-center">
-                                    View Details <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                </Link>
+                                <div className="p-8 flex-grow flex flex-col">
+                                    <h3 className="text-2xl font-bold text-[#0F2B46] mb-4">{service.title}</h3>
+                                    <p className="text-slate-600 mb-6 leading-relaxed text-sm flex-grow">{service.desc}</p>
+                                    <Link to="/services" className="text-[#C5A059] font-bold text-xs uppercase tracking-wider flex items-center mt-auto">
+                                        View Details <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    </Link>
+                                </div>
                             </motion.div>
                         ))}
                     </div>
