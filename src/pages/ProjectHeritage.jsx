@@ -214,7 +214,7 @@ export default function ProjectHeritage() {
                         <PaintBucket size={48} className="mx-auto text-[#C5A059] mb-6" />
                         <h3 className="text-3xl font-bold mb-4">Respect for the Past. Built for the Future.</h3>
                         <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-                            Trust Ontarious Construction with your complex renovation and restoration projects.
+                            Trust Catconstruction with your complex renovation and restoration projects.
                         </p>
                         <div className="flex justify-center">
                             <Link to="/contact">

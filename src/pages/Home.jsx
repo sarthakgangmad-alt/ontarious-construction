@@ -157,7 +157,7 @@ export default function Home() {
                     >
                         <div className="flex items-center space-x-3 text-[#C5A059] font-bold uppercase tracking-[0.2em] mb-8 text-sm md:text-base">
                             <span className="w-16 h-0.5 bg-[#C5A059]"></span>
-                            <span>Ontarious Construction</span>
+                            <span>Catconstruction</span>
                         </div>
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight leading-[1.1]">
                             Premium Builders. <br />
@@ -166,7 +166,7 @@ export default function Home() {
                             </span>
                         </h1>
                         <p className="text-2xl md:text-3xl font-bold text-[#C5A059] mb-10 tracking-wide">
-                            Call Now: <a href="tel:647-642-1281" className="hover:text-white transition-colors">(647) 642-1281</a>
+                            Call Now: <a href="tel:478-312-7259" className="hover:text-white transition-colors">+1 (478) 312-7259</a>
                         </p>
                         <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-2xl leading-relaxed font-light border-l-4 border-[#C5A059] pl-6">
                             Professional Residential & Commercial Renovation Services across Toronto & the GTA. Quality that stands the test of time.
@@ -182,8 +182,8 @@ export default function Home() {
                                     Request a Quote
                                 </LiquidMetalButton>
                             </Link>
-                            <a href="tel:647-642-1281" className="inline-flex items-center justify-center px-10 py-5 bg-transparent border-2 border-slate-500 text-white font-bold uppercase tracking-wider hover:bg-white hover:text-[#0F2B46] hover:border-white transition-all rounded-sm">
-                                Call (647) 642-1281
+                            <a href="tel:478-312-7259" className="inline-flex items-center justify-center px-10 py-5 bg-transparent border-2 border-slate-500 text-white font-bold uppercase tracking-wider hover:bg-white hover:text-[#0F2B46] hover:border-white transition-all rounded-sm">
+                                Call +1 (478) 312-7259
                             </a>
                         </div>
                     </motion.div>
@@ -202,7 +202,7 @@ export default function Home() {
                         </div>
                         <div>
                             <p className="text-xl text-slate-600 leading-relaxed mb-6 font-light">
-                                <span className="font-bold text-[#0F2B46]">Ontarious Construction</span> is a premier residential and commercial renovation firm proudly serving Toronto and the Greater Toronto Area.
+                                <span className="font-bold text-[#0F2B46]">Catconstruction</span> is a premier residential and commercial renovation firm proudly serving Toronto and the Greater Toronto Area.
                             </p>
                             <p className="text-slate-600 leading-relaxed mb-8">
                                 We are committed to meticulous craftsmanship, professionalism, and delivering projects that consistently exceed expectations. Our licensed team ensures precision, structural integrity, and architectural excellence from foundational work to the final finish.
@@ -294,7 +294,7 @@ export default function Home() {
                 <div className="max-w-4xl mx-auto px-4">
                     <h2 className="text-4xl md:text-6xl font-black text-[#0F2B46] mb-8">Ready to Build?</h2>
                     <p className="text-xl text-slate-500 mb-12 max-w-2xl mx-auto font-light">
-                        Contact Ontarious Construction today for a consultation on your premium residential or commercial renovation project.
+                        Contact Catconstruction today for a consultation on your premium residential or commercial renovation project.
                     </p>
                     <div className="flex justify-center">
                         <Link to="/contact">

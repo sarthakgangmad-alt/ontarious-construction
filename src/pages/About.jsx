@@ -39,7 +39,7 @@ export default function About() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-7xl font-bold mb-6"
                     >
-                        About <span className="text-[#C5A059]">Ontarious Construction</span>
+                        About <span className="text-[#C5A059]">Catconstruction</span>
                     </motion.h1>
                     <p className="text-xl text-slate-300 max-w-3xl mx-auto font-light">
                         Premium Residential & Outdoor Construction in Ontario.
@@ -57,7 +57,7 @@ export default function About() {
                         </h2>
                         <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                             <p>
-                                <span className="font-bold text-[#0F2B46]">Ontarious Construction</span> is a premier construction firm based in Maple, Ontario.
+                                <span className="font-bold text-[#0F2B46]">Catconstruction</span> is a premier construction firm based in Maple, Ontario.
                                 We specialize in high-end backend transformations, structural framing, and custom residential renovations.
                             </p>
                             <p>
@@ -70,7 +70,7 @@ export default function About() {
                     </div>
 
                     <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100">
-                        <h3 className="text-2xl font-bold text-[#0F2B46] mb-8">Why Choose Ontarious Construction?</h3>
+                        <h3 className="text-2xl font-bold text-[#0F2B46] mb-8">Why Choose Catconstruction?</h3>
                         <ul className="space-y-6">
                             {[
                                 'Specialized in Luxury Outdoor Living',

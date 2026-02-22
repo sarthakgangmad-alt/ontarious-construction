@@ -19,8 +19,8 @@ export default function Navbar() {
                     <Link to="/" className="flex items-center">
                         <img
                             src="/logo.png"
-                            alt="Ontarious Construction"
-                            className="h-20 w-auto object-contain"
+                            alt="Catconstruction"
+                            className="h-20 w-auto object-contain mix-blend-multiply"
                         />
                     </Link>
 

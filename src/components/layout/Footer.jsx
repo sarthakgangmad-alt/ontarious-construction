@@ -11,7 +11,7 @@ export default function Footer() {
                         <Link to="/" className="inline-block mb-6">
                             <img
                                 src="/logo.png"
-                                alt="Ontarious Construction"
+                                alt="Catconstruction"
                                 className="h-24 w-auto object-contain rounded"
                             />
                         </Link>
@@ -57,11 +57,11 @@ export default function Footer() {
                             </div>
                             <div className="flex items-center">
                                 <Phone size={18} className="text-[#C5A059] mr-3 shrink-0" />
-                                <p><a href="tel:6476421281" className="hover:text-white transition-colors">(647) 642-1281</a></p>
+                                <p><a href="tel:4783127259" className="hover:text-white transition-colors">+1 (478) 312-7259</a></p>
                             </div>
                             <div className="flex items-center">
                                 <Mail size={18} className="text-[#C5A059] mr-3 shrink-0" />
-                                <p><a href="mailto:info@ontariousconstruction.ca" className="hover:text-white transition-colors">info@ontariousconstruction.ca</a></p>
+                                <p><a href="mailto:info@catconstruction.ca" className="hover:text-white transition-colors">info@catconstruction.ca</a></p>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-[#1a3c5e] text-center md:text-left flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
-                    <p>© {new Date().getFullYear()} Ontarious Construction. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Catconstruction. All rights reserved.</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <a href="#" className="hover:text-[#C5A059] transition-colors"><Instagram size={20} /></a>
                         <a href="#" className="hover:text-[#C5A059] transition-colors"><Facebook size={20} /></a>

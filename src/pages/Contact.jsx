@@ -82,7 +82,7 @@ export default function Contact() {
                             Request Received
                         </h3>
                         <p className="text-slate-500 mb-8 leading-relaxed">
-                            Thank you for contacting Ontarious Construction. Our team will review your details and respond promptly.
+                            Thank you for contacting Catconstruction. Our team will review your details and respond promptly.
                         </p>
 
                         <LiquidMetalButton
@@ -103,10 +103,10 @@ export default function Contact() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-6xl font-black mb-6"
                     >
-                        Get In Touch With <span className="text-[#C5A059]">Ontarious Construction</span>
+                        Get In Touch With <span className="text-[#C5A059]">Catconstruction</span>
                     </motion.h1>
                     <p className="text-slate-300 text-lg max-w-3xl mx-auto font-light leading-relaxed">
-                        For inquiries, project consultations, or to request a quote, please call us directly at (647) 642-1281 or complete the contact form below. Our team will respond promptly.
+                        For inquiries, project consultations, or to request a quote, please call us directly at +1 (478) 312-7259 or complete the contact form below. Our team will respond promptly.
                     </p>
                 </div>
             </div>
@@ -233,7 +233,7 @@ export default function Contact() {
                             />
                         </div>
 
-                        <p className="text-sm text-center text-slate-500 my-4 font-medium">Call us directly at <a href="tel:647-642-1281" className="text-[#0F2B46] font-bold hover:text-[#C5A059]">(647) 642-1281</a> for immediate assistance.</p>
+                        <p className="text-sm text-center text-slate-500 my-4 font-medium">Call us directly at <a href="tel:478-312-7259" className="text-[#0F2B46] font-bold hover:text-[#C5A059]">+1 (478) 312-7259</a> for immediate assistance.</p>
 
                         <LiquidMetalButton
                             type="submit"
@@ -254,7 +254,7 @@ export default function Contact() {
                         <div>
                             <h3 className="text-2xl font-bold text-[#0F2B46] mb-6">Contact Details</h3>
                             <p className="text-slate-600 mb-8 leading-relaxed border-l-4 border-[#C5A059] pl-4">
-                                Partner with Ontarious Construction for premium residential and commercial renovations across the Greater Toronto Area.
+                                Partner with Catconstruction for premium residential and commercial renovations across the Greater Toronto Area.
                             </p>
                         </div>
 
@@ -263,7 +263,7 @@ export default function Contact() {
                                 <Phone className="text-[#C5A059] mt-1 shrink-0" size={24} />
                                 <div className="ml-4">
                                     <h4 className="font-bold text-[#0F2B46] uppercase text-sm tracking-wider mb-1">Phone</h4>
-                                    <p className="text-slate-600"><a href="tel:647-642-1281" className="hover:text-[#C5A059] transition-colors">(647) 642-1281</a></p>
+                                    <p className="text-slate-600"><a href="tel:478-312-7259" className="hover:text-[#C5A059] transition-colors">+1 (478) 312-7259</a></p>
                                 </div>
                             </div>
 
@@ -304,7 +304,7 @@ export default function Contact() {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 text-center">
                 <h3 className="text-3xl font-black text-[#0F2B46] mb-6">Ready to start your renovation?</h3>
-                <p className="text-xl text-slate-600">Call <a href="tel:647-642-1281" className="font-bold text-[#0F2B46] hover:text-[#C5A059] transition-colors">(647) 642-1281</a> today.</p>
+                <p className="text-xl text-slate-600">Call <a href="tel:478-312-7259" className="font-bold text-[#0F2B46] hover:text-[#C5A059] transition-colors">+1 (478) 312-7259</a> today.</p>
             </div>
 
         </div>

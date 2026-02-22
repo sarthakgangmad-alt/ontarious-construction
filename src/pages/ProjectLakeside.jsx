@@ -215,7 +215,7 @@ export default function ProjectLakeside() {
                         <Building2 size={48} className="mx-auto text-[#C5A059] mb-6" />
                         <h3 className="text-3xl font-bold mb-4">Built with Precision. Delivered with Pride.</h3>
                         <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-                            Ontarious Construction brings this level of dedication and detail to every project we undertake.
+                            Catconstruction brings this level of dedication and detail to every project we undertake.
                         </p>
                         <div className="flex justify-center">
                             <Link to="/contact">

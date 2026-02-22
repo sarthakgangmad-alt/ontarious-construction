@@ -70,7 +70,7 @@ export default function HomeContactForm() {
                 </div>
                 <h3 className="text-3xl font-black text-[#0F2B46] mb-4">Request Received</h3>
                 <p className="text-slate-600 mb-8 max-w-md mx-auto">
-                    Thank you. We have received your project details and a member of the Ontarious Construction team will contact you shortly.
+                    Thank you. We have received your project details and a member of the Catconstruction team will contact you shortly.
                 </p>
                 <LiquidMetalButton
                     onClick={handleAwesome}
@@ -201,7 +201,7 @@ export default function HomeContactForm() {
                 />
             </div>
 
-            <p className="text-sm text-center text-slate-600 mt-4 mb-2">Call us directly at <a href="tel:647-642-1281" className="text-[#0F2B46] font-bold hover:text-[#C5A059]">(647) 642-1281</a> for immediate assistance.</p>
+            <p className="text-sm text-center text-slate-600 mt-4 mb-2">Call us directly at <a href="tel:478-312-7259" className="text-[#0F2B46] font-bold hover:text-[#C5A059]">+1 (478) 312-7259</a> for immediate assistance.</p>
 
             <LiquidMetalButton
                 type="submit"
